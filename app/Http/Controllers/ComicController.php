@@ -22,4 +22,14 @@ class ComicController extends Controller
 
     }
 
+    public function create() {
+
+        return view('comics.create');
+    }
+
+    public function store()
+    {
+
+        dump('Metodo store');
+    }
 }

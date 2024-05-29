@@ -7,7 +7,9 @@ Home
 @endsection
 
 @section('content')
+<div class="container">
 
-<h1>Siamo nel comic.create</h1>
+    <h1>Siamo nel comics.create</h1>
 
+</div>
 @endsection

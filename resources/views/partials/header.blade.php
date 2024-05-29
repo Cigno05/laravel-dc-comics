@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <a href="/" class="navbar-brand">Home</a>
         <a href="{{ url('/comics') }}" class="navbar-brand">Comic</a>
-        <a href="/comic/create" class="btn btn-light" type="button">Crea</a>
+        <a href="{{ url('/comics/create') }}" class="btn btn-light" type="button">Crea</a>
                
     </div>
 </nav>

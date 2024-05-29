@@ -16,4 +16,15 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', [PageController::class, 'home'])->name('home');
 
+// INDEX
 Route::get('/comics', [ComicController::class,'index'])->name('comics.index');
+
+// CREATE (che va prima di show per evitare conflitto)
+Route::get('/comics/create', [ComicController::class,'create'])->name('comics.create');
+
+// SHOW
+Route::get('/comics/{comic}', [ComicController::class,'show'])->name('comics.show');
+
+// STORE (con metodo pos ainvece di get)
+Route::post('/comics', [ComicController::class, 'store'])->name('comics.store');
+
