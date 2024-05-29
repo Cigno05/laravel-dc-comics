@@ -6,12 +6,12 @@ Home
 
 @endsection
 
-@section('content')\
+@section('content')
 
 <div class="container">
 
-    <h1>Siamo nella Homepage</h1>
-    
+    <h1>Siamo nel comic.index</h1>
+
 </div>
 
 @endsection
