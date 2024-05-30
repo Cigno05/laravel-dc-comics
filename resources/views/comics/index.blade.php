@@ -12,7 +12,7 @@ Home
 
     <h1>COMICS</h1>
 
-    @foreach ($comics as $comic)
+    
         <main>
             <section class="mb-5 py-1">
                 <div class="container mt-4">
@@ -40,7 +40,7 @@ Home
             </section>
         </main>
 
-    @endforeach
+    
 
 </div>
 
