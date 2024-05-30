@@ -17,8 +17,8 @@ class ComicController extends Controller
 
     public function show(Comic $comic)
     {
-        dd($comic);
-        return view('comics.show');
+        // dd($comic);
+        return view('comics.show', compact('comic'));
 
     }
 
@@ -27,9 +27,36 @@ class ComicController extends Controller
         return view('comics.create');
     }
 
-    public function store()
+    public function store(Request $request)
     {
+        $from_data = $request->all();
+        // dd($from_data);
 
-        dump('Metodo store');
+        $new_comic = Comic::create($from_data);
+
+        return to_route('comics.show', $new_comic);
     }
+
+    public function edit(Comic $comic) {
+        
+        return view('comics.edit', compact('comic'));
+    }
+
+    public function update(Request $request, Comic $comic) {
+
+        $from_data = $request->all();
+
+        $comic->fill($from_data);
+
+        $comic->save();
+
+        return to_route('comics.show', $comic);
+    }
+
+    public function destroy(Comic $comic) {
+        
+        $comic->delete();
+        
+        return to_route('comics.index');
+}
 }
