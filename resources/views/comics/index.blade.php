@@ -17,7 +17,8 @@ Home
             <section class="mb-5 py-1">
                 <div class="container mt-4">
                     <div class="row g-5">
-                        @foreach ($comics as $comic)                  <div class="col-12 col-xl-4 col-lg-6 card-group">
+                        @foreach ($comics as $comic)
+                            <div class="col-12 col-xl-4 col-lg-6 card-group">
                                 <div class="card">
                                     <img src="{{$comic->thumb}}" class="card-img-top img-micro align-self-center p-1" alt="...">
                                     <div class="card-body my-card-body">
